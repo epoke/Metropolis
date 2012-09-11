@@ -123,6 +123,12 @@
 		<value>$INFO[ListItem.AudioChannels,flags/AudioChannels/,ch.png]</value>
 	</variable>
 	<variable name="MediaFlag_MPAA">
+		<!-- Korea -->
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,전체)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,전체)]">flags/Rating/KR_Certificate_All.png</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,12세)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,15세)]">flags/Rating/KR_Certificate_12.png</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,15세)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,15세)]">flags/Rating/KR_Certificate_15.png</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,불가)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,불가)]">flags/Rating/KR_Certificate_18.png</value>
+        <value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,제한)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,제한)]">flags/Rating/KR_Certificate_R.png</value>
 		<!-- US -->
 		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated R,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated R,Left)]">flags/Rating/mpaa_r.png</value>
 		<value condition="[!IsEmpty(ListItem.mpaa) + SubString(ListItem.mpaa,Rated PG-13,Left)] | [IsEmpty(ListItem.mpaa) + SubString(VideoPlayer.mpaa,Rated PG-13,Left)]">flags/Rating/mpaa_pg13.png</value>
